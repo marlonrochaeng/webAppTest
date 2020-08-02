@@ -26,7 +26,7 @@ public class DriverFactory {
 			System.setProperty("webdriver.chrome.driver", Config.chromeDriverPath);
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.setExperimentalOption("useAutomationExtension", false);
-			chromeOptions.addArguments("--headless");
+			chromeOptions.addArguments("headless");
 			chromeOptions.addArguments("--disable-infobars");
 			chromeOptions.addArguments("--disable-dev-shm-usage");
 			chromeOptions.addArguments("--no-sandbox");
