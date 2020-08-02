@@ -31,7 +31,6 @@ public class DriverFactory {
 			chromeOptions.addArguments("--disable-dev-shm-usage");
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--disable-gpu");
-			chromeOptions.addArguments("--remote-debugging-port=3219");
 			
 			//chromeOptions.setBinary(Config.chromeDriverPath);
 			driver = new ChromeDriver(chromeOptions);
