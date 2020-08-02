@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 		strict = false, 
 		glue = { "steps" },
 		features = "src/test/resources/features/",
-		tags = {"@scenario002"})
+		tags = {"@regression"})
 public class RunCucumberTest {
 
 }
