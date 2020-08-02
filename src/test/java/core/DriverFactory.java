@@ -31,6 +31,7 @@ public class DriverFactory {
 			chromeOptions.addArguments("--disable-dev-shm-usage");
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--disable-gpu");
+			chromeOptions.setBinary(Config.chromeDriverPath);
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case FIREFOX:
