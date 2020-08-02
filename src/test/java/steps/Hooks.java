@@ -17,6 +17,7 @@ public class Hooks{
 	public void beforeScenario() {
 		// Web driver setup
 		System.out.println("Inicializando Driver\n");
+		System.out.println("Inicializando Driver\n");
 		createDriver();
 		System.out.println("Driver Inicializado\n");
 

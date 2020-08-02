@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverFactory {
 	
@@ -23,7 +24,14 @@ public class DriverFactory {
 		switch (Config.browser) {
 		case CHROME:
 			System.setProperty("webdriver.chrome.driver", Config.chromeDriverPath);
-			driver = new ChromeDriver();
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.setExperimentalOption("useAutomationExtension", false);
+			chromeOptions.addArguments("--headless");
+			chromeOptions.addArguments("--disable-infobars");
+			chromeOptions.addArguments("--disable-dev-shm-usage");
+			chromeOptions.addArguments("--no-sandbox");
+			chromeOptions.addArguments("--disable-gpu");
+			driver = new ChromeDriver(chromeOptions);
 			break;
 		case FIREFOX:
 			System.setProperty("webdriver.gecko.driver", Config.firefoxDriverPath);
