@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
 	
@@ -37,7 +38,7 @@ public class DriverFactory {
 			break;
 		case FIREFOX:
 			System.setProperty("webdriver.gecko.driver", Config.firefoxDriverPath);
-			driver = new ChromeDriver();
+			driver = new FirefoxDriver();
 			break;
 		}
 
