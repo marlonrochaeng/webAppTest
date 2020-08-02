@@ -46,7 +46,7 @@ public class DriverFactory {
 			break;
 			
 		case PHANTOM:
-			System.setProperty("webdriver.gecko.driver", Config.phantomDriverPath);
+			System.setProperty("phantomjs.binary.path", Config.phantomDriverPath);
 			driver = new PhantomJSDriver();
 			break;
 		}
