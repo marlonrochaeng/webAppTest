@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 public class DriverFactory {
 	
@@ -43,7 +44,14 @@ public class DriverFactory {
 			firefoxptions.addArguments("--headless");
 			driver = new FirefoxDriver();
 			break;
+			
+		case PHANTOM:
+			System.setProperty("webdriver.gecko.driver", Config.phantomDriverPath);
+			driver = new PhantomJSDriver();
+			break;
 		}
+		
+		
 
 		// Implicity wait for general driver control
 		driver.manage().timeouts().implicitlyWait(IMPLICITY_WAIT_DEFAULT_TIME, TimeUnit.SECONDS);

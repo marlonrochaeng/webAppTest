@@ -2,10 +2,10 @@ package core;
 
 public class Config {
 	
-	public static Browsers browser = Browsers.FIREFOX;
+	public static Browsers browser = Browsers.PHANTOM;
 
 	public enum Browsers {
-		CHROME, FIREFOX
+		CHROME, FIREFOX, PHANTOM
 	}
 
 	// Project base directories
@@ -14,4 +14,5 @@ public class Config {
 	// Drivers path. Make sure to add ".exe" if you are using Windows based OS
 	public static String chromeDriverPath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";
 	public static String firefoxDriverPath = System.getProperty("user.dir") + "/src/test/resources/drivers/geckodriver";
+	public static String phantomDriverPath = System.getProperty("user.dir") + "/src/test/resources/drivers/phantomjs";
 }
