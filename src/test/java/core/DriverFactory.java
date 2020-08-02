@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
 	
@@ -38,6 +39,8 @@ public class DriverFactory {
 			break;
 		case FIREFOX:
 			System.setProperty("webdriver.gecko.driver", Config.firefoxDriverPath);
+			FirefoxOptions firefoxptions = new FirefoxOptions();
+			firefoxptions.addArguments("--headless");
 			driver = new FirefoxDriver();
 			break;
 		}
