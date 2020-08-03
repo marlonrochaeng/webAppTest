@@ -27,21 +27,20 @@ public class DriverFactory {
 		switch (Config.browser) {
 		case CHROME:
 			System.setProperty("webdriver.chrome.driver", Config.chromeDriverPath);
-			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.setExperimentalOption("useAutomationExtension", false);
-			chromeOptions.addArguments("--headless");
-			chromeOptions.addArguments("--disable-infobars");
-			chromeOptions.addArguments("--disable-dev-shm-usage");
-			chromeOptions.addArguments("--no-sandbox");
-			chromeOptions.addArguments("--disable-gpu");
 			
-			//chromeOptions.setBinary(Config.chromeDriverPath);
-			driver = new ChromeDriver(chromeOptions);
+			/*
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--headless");
+			*/
+			
+			driver = new ChromeDriver();
 			break;
 		case FIREFOX:
 			System.setProperty("webdriver.gecko.driver", Config.firefoxDriverPath);
-			FirefoxOptions firefoxptions = new FirefoxOptions();
-			firefoxptions.addArguments("--headless");
+			
+			//FirefoxOptions firefoxptions = new FirefoxOptions();
+			//firefoxptions.addArguments("--headless");
+			
 			driver = new FirefoxDriver();
 			break;
 			

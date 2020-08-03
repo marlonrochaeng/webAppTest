@@ -2,7 +2,7 @@ package core;
 
 public class Config {
 	
-	public static Browsers browser = Browsers.PHANTOM;
+	public static Browsers browser = Browsers.CHROME;
 
 	public enum Browsers {
 		CHROME, FIREFOX, PHANTOM

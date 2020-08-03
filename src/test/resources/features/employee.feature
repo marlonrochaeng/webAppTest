@@ -14,7 +14,7 @@ Feature: Register new employee
 	
 	
 	@scenario006
-  Scenario Outline: Register a new employee
+  Scenario Outline: Edit a employee
     Given Im logged in
     When I edit an employee name
     Then I should be able to see the success alert "<msg>"

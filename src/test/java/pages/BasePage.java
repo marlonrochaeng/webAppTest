@@ -77,6 +77,11 @@ public class BasePage {
 		}
 	}
 	
+	/**
+	 * Returns element text using explicitly wait
+	 * @param locator
+	 * @return
+	 */
 	public String getElementText(By locator) {
 		//colocar var estatica no 30
 		
@@ -84,6 +89,10 @@ public class BasePage {
 		return element.getText();
 	}
 	
+	/**
+	 * Use javascript executor to perform a click
+	 * @param locator
+	 */
 	public void javascriptClick(By locator) {
 		WebElement element = driver.findElement(locator);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -91,23 +100,47 @@ public class BasePage {
 
 	}
 	
+	/**
+	 * Get element attribute 
+	 * @param locator
+	 * @param attr
+	 * @return
+	 */
 	public String getAttr(By locator,String attr) {
 		return driver.findElement(locator).getAttribute(attr);
 	}
 	
+	/**
+	 * Returns element text using implicit wait
+	 * @param locator
+	 * @return
+	 */
 	public String getText(By locator) {
 		return driver.findElement(locator).getText();
 	}
 	
+	/**
+	 * Get page title
+	 * @return
+	 */
 	public String getTitle() {
 		return driver.getTitle();
 	}
 	
+	/**
+	 * select element by text on select
+	 * @param locator
+	 * @param text
+	 */
 	public void selectByText(By locator, String text) {
 		Select dropdown = new Select(driver.findElement(locator));
 		dropdown.selectByVisibleText(text);
 	}
 	
+	/**
+	 * remove element string (works only on text field)
+	 * @param locator
+	 */
 	public void clearField(By locator) {
 		driver.findElement(locator).clear();
 	}
